@@ -12,13 +12,20 @@ return new class extends Migration
     public function up(): void
 
     {
-    Schema::create('produtos', function (Blueprint $table) {
-        $table->id();
-        $table->string('descricao');
-        $table->integer('qtd');
-        $table->float('precoUnitario');
-        $table->float('precoVenda');
-        $table->timestamps();
+
+        Schema::create('produtos', function (Blueprint $table) {
+
+            $table->id();
+
+            $table->string('descricao');
+
+            $table->integer('qtd');
+
+            $table->float('precoUnitario');
+
+            $table->float('precoVenda');
+
+            $table->timestamps();
         });
     }
 

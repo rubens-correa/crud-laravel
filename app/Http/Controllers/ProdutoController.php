@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\Produto;
-
 use Illuminate\Http\Request;
-
 use Illuminate\Http\RedirectResponse;
 
 use Illuminate\Http\Response;
@@ -70,7 +67,7 @@ class ProdutoController extends Controller
     public function show(Produto $produto)
     {
         //
-        return view('produtos.show',compact('produto'));
+        return view('produtos.show', compact('produto'));
     }
 
     /**
@@ -79,7 +76,7 @@ class ProdutoController extends Controller
     public function edit(Produto $produto)
     {
         //
-        return view('produtos.edit',compact('produto'));
+        return view('produtos.edit', compact('produto'));
     }
 
     /**
@@ -106,7 +103,7 @@ class ProdutoController extends Controller
 
         return redirect()->route('produtos.index')
 
-                        ->with('success','Produto atualizado com sucesso.');
+            ->with('success', 'Produto atualizado com sucesso.');
     }
 
     /**
@@ -120,6 +117,6 @@ class ProdutoController extends Controller
 
         return redirect()->route('produtos.index')
 
-                        ->with('success','Produto excluído com sucesso.');
+            ->with('success', 'Produto excluído com sucesso.');
     }
 }
